@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 fun=true
 if [[ $(uname -s)=="Darwin" ]]; then
   if command -v brew >/dev/null; then
@@ -15,6 +15,7 @@ while (($(date +%s)<$specialTime )); do
   time=$(date +%s)
   remaining=$(($specialTime-$time))
   echo -en "\r Countdown: $remaining"
+  sleep 0.9
 done
 echo -en "\r"
 
